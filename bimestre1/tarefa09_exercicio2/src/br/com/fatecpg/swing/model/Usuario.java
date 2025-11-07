@@ -2,10 +2,10 @@ package br.com.fatecpg.swing.model;
 
 public class Usuario {
 	private String tema;
-	private boolean notificacoes;
+	private String notificacoes;
 	private int volume;
 	
-	public Usuario(String tema, boolean notificacoes, int volume) {
+	public Usuario(String tema, String notificacoes, int volume) {
 		this.tema = tema;
 		this.notificacoes = notificacoes;
 		this.volume = volume;
@@ -19,11 +19,11 @@ public class Usuario {
 		this.tema = tema;
 	}
 
-	public boolean isNotificacoes() {
+	public String isNotificacoes() {
 		return notificacoes;
 	}
 
-	public void setNotificacoes(boolean notificacoes) {
+	public void setNotificacoes(String notificacoes) {
 		this.notificacoes = notificacoes;
 	}
 
@@ -37,6 +37,6 @@ public class Usuario {
 
 	@Override
 	public String toString() {
-		return "Preferências do Usuário= [tema=" + tema + ", notificacoes=" + notificacoes + ", volume=" + volume + "]";
+		return "Preferências do Usuário \nTema: " + tema + "\nNotificações: " + notificacoes + "\nVolume: " + volume;
 	}
 }
