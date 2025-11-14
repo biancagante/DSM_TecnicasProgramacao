@@ -1,5 +1,6 @@
 package br.com.fatecpg.polimorfismo.ex01.view;
-import br.com.fatecpg.polimorfismo.ex01.model.*;
+import br.com.fatecpg.polimorfismo.ex01.model.Bicicleta;
+import br.com.fatecpg.polimorfismo.ex01.model.Carro;
 
 public class Main {
 	public static void main(String[] args) {

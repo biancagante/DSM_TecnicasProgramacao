@@ -1,5 +1,7 @@
 package br.com.fatecpg.revisaoa.view;
-import br.com.fatecpg.revisaoa.model.*;
+import br.com.fatecpg.revisaoa.model.Aluno;
+import br.com.fatecpg.revisaoa.model.Carro;
+import br.com.fatecpg.revisaoa.model.Farmacia;
 
 public class Main {
 

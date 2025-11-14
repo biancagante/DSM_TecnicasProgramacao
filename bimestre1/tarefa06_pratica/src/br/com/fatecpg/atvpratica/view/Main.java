@@ -1,5 +1,7 @@
 package br.com.fatecpg.atvpratica.view;
-import br.com.fatecpg.atvpratica.model.*;
+import br.com.fatecpg.atvpratica.model.Biblioteca;
+import br.com.fatecpg.atvpratica.model.Loja;
+import br.com.fatecpg.atvpratica.model.VideoLocadora;
 
 public class Main {
 

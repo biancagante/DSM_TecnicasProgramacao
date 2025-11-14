@@ -1,5 +1,5 @@
 package br.com.fatecpg.heranca.ex03.view;
-import br.com.fatecpg.heranca.ex03.model.*;
+import br.com.fatecpg.heranca.ex03.model.SistemaDeSeguranca;
 
 public class Main {
 	public static void main(String[] args) {

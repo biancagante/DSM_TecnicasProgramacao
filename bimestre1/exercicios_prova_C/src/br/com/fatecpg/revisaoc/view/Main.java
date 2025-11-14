@@ -1,5 +1,7 @@
 package br.com.fatecpg.revisaoc.view;
-import br.com.fatecpg.revisaoc.model.*;
+import br.com.fatecpg.revisaoc.model.Celular;
+import br.com.fatecpg.revisaoc.model.ContaBancaria;
+import br.com.fatecpg.revisaoc.model.PostoCombustivel;
 
 public class Main {
 

@@ -1,5 +1,6 @@
 package br.com.fatecpg.heranca.ex01.view;
-import br.com.fatecpg.heranca.ex01.model.*;
+import br.com.fatecpg.heranca.ex01.model.PagamentoCartao;
+import br.com.fatecpg.heranca.ex01.model.PagamentoDinheiro;
 
 public class Main {
 	public static void main(String[] args) {

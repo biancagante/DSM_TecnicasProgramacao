@@ -1,23 +1,19 @@
 package br.com.fatecpg.swing.view;
-import br.com.fatecpg.swing.model.Cliente;
-
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.JSpinner;
-import javax.swing.JComboBox;
-import javax.swing.JRadioButton;
-import javax.swing.ButtonGroup;
-import java.awt.FlowLayout;
-import java.awt.Component;
-import javax.swing.Box;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JSpinner;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+
+import br.com.fatecpg.swing.model.Cliente;
 
 public class CadastroForm extends JFrame {
 

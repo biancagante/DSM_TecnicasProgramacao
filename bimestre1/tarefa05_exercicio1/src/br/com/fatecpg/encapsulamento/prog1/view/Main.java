@@ -1,6 +1,7 @@
 package br.com.fatecpg.encapsulamento.prog1.view;
-import br.com.fatecpg.encapsulamento.prog1.model.Carro;
 import java.util.Scanner;
+
+import br.com.fatecpg.encapsulamento.prog1.model.Carro;
 
 public class Main {
 

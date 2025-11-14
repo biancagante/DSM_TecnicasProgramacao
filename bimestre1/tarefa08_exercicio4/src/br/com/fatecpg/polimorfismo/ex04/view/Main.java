@@ -1,5 +1,6 @@
 package br.com.fatecpg.polimorfismo.ex04.view;
-import br.com.fatecpg.polimorfismo.ex04.model.*;
+import br.com.fatecpg.polimorfismo.ex04.model.PagamentoBoleto;
+import br.com.fatecpg.polimorfismo.ex04.model.PagamentoCartao;
 
 public class Main {
 

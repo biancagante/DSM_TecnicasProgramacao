@@ -1,5 +1,5 @@
 package br.com.fatecpg.polimorfismo.ex02.view;
-import br.com.fatecpg.polimorfismo.ex02.model.*;
+import br.com.fatecpg.polimorfismo.ex02.model.Calculadora;
 
 public class Main {
 

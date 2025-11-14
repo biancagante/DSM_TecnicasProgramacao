@@ -1,5 +1,10 @@
 package br.edu.fatecpg.abstracao.objcotidiano.view;
-import br.edu.fatecpg.abstracao.objcotidiano.model.*; // CHAMANDO TODAS AS CLASSES DO MODEL
+// CHAMANDO TODAS AS CLASSES DO MODEL
+import br.edu.fatecpg.abstracao.objcotidiano.model.Cadeira;
+import br.edu.fatecpg.abstracao.objcotidiano.model.Celular;
+import br.edu.fatecpg.abstracao.objcotidiano.model.Mesa;
+import br.edu.fatecpg.abstracao.objcotidiano.model.Notebook;
+import br.edu.fatecpg.abstracao.objcotidiano.model.Relogio;
 
 public class Main {
 

@@ -1,5 +1,7 @@
 package br.com.fatecpg.revisaob.view;
-import br.com.fatecpg.revisaob.model.*;
+import br.com.fatecpg.revisaob.model.Funcionario;
+import br.com.fatecpg.revisaob.model.Livro;
+import br.com.fatecpg.revisaob.model.Supermercado;
 
 public class Main {
 

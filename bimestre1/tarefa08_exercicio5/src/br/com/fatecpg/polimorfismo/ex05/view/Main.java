@@ -1,5 +1,5 @@
 package br.com.fatecpg.polimorfismo.ex05.view;
-import br.com.fatecpg.polimorfismo.ex05.model.*;
+import br.com.fatecpg.polimorfismo.ex05.model.Conversor;
 
 public class Main {
 
