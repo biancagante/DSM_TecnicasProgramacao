@@ -14,10 +14,11 @@ Repositório destinado ao armazenamento de **tarefas, projetos e aulas** da disc
 ---
 
 ## 📂 Organização do Repositório
-A estrutura do repositório foi organizada por **bimestres**, facilitando a navegação e acompanhamento dos conteúdos:
+A estrutura do repositório foi organizada por **semestres**, facilitando a navegação e acompanhamento dos conteúdos:
+- semestre 1 ✅
+- semestre 2 ✅
 
-- [Bimestre 1](https://github.com/biancagante/DSM2_TecnicasProgramacao/tree/main/bimestre1)  
-- *Bimestres seguintes serão adicionados futuramente...*
+- 
 
 ---
 
