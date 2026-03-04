@@ -6,17 +6,24 @@ public class Aluno {
 	private String nome;
 	private double notaFinal;
 	private int horas;
-//	private int meses;
 	private LocalDate dataInicio;
 	private LocalDate dataFim;
 	
 	public Aluno (String nome) {
 		this.nome = nome;
-		//this.notaFinal = nota;
-		//this.horas = horas;
-		//this.meses = meses;
 	}
 	
+	public Aluno(String nome, double notaFinal, int horas, LocalDate dataInicio, LocalDate dataFim) {
+		super();
+		this.nome = nome;
+		this.notaFinal = notaFinal;
+		this.horas = horas;
+		this.dataInicio = dataInicio;
+		this.dataFim = dataFim;
+	}
+
+
+
 	public String getNome() {
 		return nome;
 	}

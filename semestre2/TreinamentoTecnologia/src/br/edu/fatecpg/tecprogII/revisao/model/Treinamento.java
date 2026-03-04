@@ -8,6 +8,13 @@ public class Treinamento {
 	private int cargaHoraria;
 	ArrayList<Aluno> alunos = new ArrayList<>();
 	
+	public Treinamento(int id, Instrutor instrutor, String ling, int horas) {
+		this.id = id;
+		this.nomeInstrutor = instrutor.getNome();
+		this.linguagemEnsinada = ling;
+		this.cargaHoraria = definirCargaHoraria(horas);
+	}
+	
 	public Treinamento(int id, String nomeInstrutor, String ling, int horas) {
 		this.id = id;
 		this.nomeInstrutor = nomeInstrutor;
