@@ -6,6 +6,7 @@ import br.edu.fatecpg.tecprogII.revisao.model.*;
 public class Main {
 
 	public static void main(String[] args) {
+		System.out.println("Testes");
 		Aluno bianca = new Aluno("Bianca");
 		
 		Instrutor alessandro = new Instrutor("Alessandro", true);
