@@ -39,10 +39,10 @@ public class Socio {
 
     @Override
     public String toString() {
-        return "Socio {" +
+        return "\033[95m\n\t\tSocio\033[0m {" +
                 "nomeSocio='" + nomeSocio + '\'' +
                 ", cnpjCpfDoSocio='" + cnpjCpfDoSocio + '\'' +
                 ", qualificacaoSocio='" + qualificacaoSocio + '\'' +
-                '}';
+                "}";
     }
 }

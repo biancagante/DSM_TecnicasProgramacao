@@ -68,12 +68,12 @@ public class Empresa {
 
     @Override
     public String toString() {
-        return "Empresa {" +
-                "cnpj='" + cnpj + '\'' +
-                ", razaoSocial='" + razaoSocial + '\'' +
-                ", nomeFantasia='" + nomeFantasia + '\'' +
-                ", logradouro='" + logradouro + '\'' +
-                ", socios=" + socios +
-                '}';
+        return "\033[94mEmpresa\033[0m {" +
+                "\n\tcnpj='" + cnpj + '\'' +
+                "\n\trazaoSocial='" + razaoSocial + '\'' +
+                "\n\tnomeFantasia='" + nomeFantasia + '\'' +
+                "\n\tlogradouro='" + logradouro + '\'' +
+                "\n\tsocios=" + socios +
+                "\n}";
     }
 }
