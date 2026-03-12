@@ -23,14 +23,16 @@ public class Main {
 
         do {
             System.out.println("\033[93m- Digite o CPNJ a ser buscado: \033[0m");
-            String cpnj = scanner.next();
+            String cnpj = scanner.next();
 
-            if (cpnj.equals("1")) {
+            if (cnpj.equals("1")) {
                 continuar = false;
                 break;
             }
 
-            Empresa empresa = ConsomeAPI.buscarCPNJ(cpnj);
+            String cnpjLimpo = cnpj.replaceAll("[^0-9]", "");
+
+            Empresa empresa = ConsomeAPI.buscarCPNJ(cnpjLimpo);
             System.out.println(empresa);
 
             try (var conn = DBConnection.connection()) {
@@ -54,3 +56,5 @@ public class Main {
 //00000000000191
 //62823257012964
 //19131243000197
+// 14.212.480/0001-69
+// 08.144.854/0001-53
