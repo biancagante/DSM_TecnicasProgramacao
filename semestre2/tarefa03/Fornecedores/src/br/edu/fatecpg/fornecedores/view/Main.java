@@ -18,11 +18,10 @@ import java.util.Scanner;
 public class Main {
     static void main(String[] args) throws IOException, InterruptedException {
         Scanner scanner = new Scanner(System.in);
-//        ArrayList<Empresa> fornecedores = new ArrayList<>();
         boolean continuar = true;
 
         do {
-            System.out.println("\033[93m- Digite o CPNJ a ser buscado: \033[0m");
+            System.out.println("\033[93m- Digite o CNPJ a ser buscado: \033[0m");
             String cnpj = scanner.next();
 
             if (cnpj.equals("1")) {
@@ -32,7 +31,7 @@ public class Main {
 
             String cnpjLimpo = cnpj.replaceAll("[^0-9]", "");
 
-            Empresa empresa = ConsomeAPI.buscarCPNJ(cnpjLimpo);
+            Empresa empresa = ConsomeAPI.buscarCNPJ(cnpjLimpo);
             System.out.println(empresa);
 
             try (var conn = DBConnection.connection()) {

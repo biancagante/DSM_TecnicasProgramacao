@@ -12,7 +12,7 @@ import java.net.http.HttpResponse;
 public class ConsomeAPI {
     public static Gson gson = new Gson();
 
-    public static Empresa buscarCPNJ(String cnpj) throws IOException, InterruptedException {
+    public static Empresa buscarCNPJ(String cnpj) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest
                 .newBuilder()
