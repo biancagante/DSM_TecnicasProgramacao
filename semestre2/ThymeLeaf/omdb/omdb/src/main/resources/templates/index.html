@@ -1,0 +1,25 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1 class="site-title"><span>Cinema</span> World</h1>
+        <section>
+            <div class="search-card">
+                <p class="search-label">Busque por filmes e séries</p>
+                <form action="/buscar" method="get">
+                    <div class="input-row">
+                        <input type="text" name="titulo" placeholder="Movie or series name" required>
+                        <input type="submit" value="Buscar">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

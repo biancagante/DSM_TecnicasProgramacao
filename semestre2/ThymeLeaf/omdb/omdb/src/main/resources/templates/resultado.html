@@ -1,0 +1,29 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resultado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div th:if="${erro}" class="card erro">
+            <h1 th:text="${erro}"></h1>
+        </div>
+        <div th:if="${titulo}" class="card titulo">
+            <div>
+                <h1 th:text="${titulo.tipo}? 'Filme' : 'Série'"></h1>
+                <img th:src="${titulo.poster}" width="200px">
+            </div>
+            <div>
+                <h2 th:text="${titulo.titulo}" class="nome"></h2>
+                <p th:text="${titulo.ano}"></p>
+                <p th:text="${titulo.genero}"></p>
+                <p th:text="${titulo.diretor}"></p>
+                <p th:text="${titulo.plot}"></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
