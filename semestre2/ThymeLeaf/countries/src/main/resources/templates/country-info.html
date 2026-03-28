@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="planet-wrap">
+        <div class="planet">
+        <div class="planet-bands"></div>
+        <div class="planet-shine"></div>
+        </div>
+        <div class="planet-ring"></div>
+    </div>
+    <main>
+        <div class="card">
+            <div th:if="${error}" class="error">
+                <p th:text="${error}"></p>
+                <a href="/" class="back">← Search another country</a>
+            </div>
+            <div th:if="${country != null}">
+                <h1 th:text="${country.nome.comum}"></h1>
+                <div class="flag-wrap">
+                    <img th:src="${country.bandeira.png}" th:alt="${country.bandeira.alt}">
+                </div>
+                <div class="info-grid">
+                    <span class="label">Capital</span>
+                    <span class="value" th:text="${country.capital[0]}"></span>
+                    <span class="label">Region</span>
+                    <span class="value" th:text="${country.regiao}"></span>
+                    <span class="label">Sub-region</span>
+                    <span class="value" th:text="${country.subRegiao}"></span>
+                    <span class="label">Population</span>
+                    <span class="value" th:text="${country.populacao}"></span>
+                    <span class="label">Area</span>
+                    <span class="value"><span th:text="${country.area}"></span> km²</span>
+                </div>
+                <a href="/" class="back">← Search another country</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="planet-wrap">
+        <div class="planet">
+        <div class="planet-bands"></div>
+        <div class="planet-shine"></div>
+        </div>
+        <div class="planet-ring"></div>
+    </div>
+    <main>
+        <div class="card">
+            <h1>Search a country:</h1>
+            <form action="/buscar" method="get">
+                <input type="text" name="nome" placeholder="Type the country name">
+                <input type="submit" value="Search">
+            </form>
+        </div>
+    </main>
+</body>
+</html>
