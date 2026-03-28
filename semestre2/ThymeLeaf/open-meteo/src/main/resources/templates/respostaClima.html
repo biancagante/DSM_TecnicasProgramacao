@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima atual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <!-- Erro ao buscar clima -->
+        <div th:if="${erro}" class="erro">
+            <p th:text="${erro}"></p>
+        </div>
+        <!-- Resposta normal se encontrar as coordenadas -->
+        <div th:if="${climaDados}" class="resposta">
+            <p th:text="${climaDados}"></p>
+            <p th:text="${climaDados.climaAtual}"></p>
+            <section class="climaAtual weathercode">
+                <p th:text="${climaDados.climaAtual.clima}" class="climaAtual"></p>
+                <span th:if="${climaDados.climaAtual.clima == 0}"><p>Céu limpo</p></span>
+                <p th:if="${climaDados.climaAtual.clima > 0 && climaDados.climaAtual.clima < 4}"><span>Parcialmente nublado</span></p>
+                <p th:if="${climaDados.climaAtual.clima >= 45 && climaDados.climaAtual.clima <= 48 }"><span>Neblina</span></p>
+                <p th:if="${climaDados.climaAtual.clima >= 61 && climaDados.climaAtual.clima <= 67 }"><span>Chuva</span></p>
+                <p th:if="${climaDados.climaAtual.clima >= 71 && climaDados.climaAtual.clima <= 77 }"><span>Neve</span></p>
+                <p th:if="${climaDados.climaAtual.clima >= 80 && climaDados.climaAtual.clima <= 82 }"><span>Pancadas de chuva</span></p>
+                <p th:unless="${!(climaDados.climaAtual.clima >= 51 && climaDados.climaAtual.clima <= 57) || (climaDados.climaAtual.clima < 82)}">Chuva leve</p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
