@@ -8,12 +8,16 @@
 </head>
 <body>
     <main>
-        <h1>Inserir coordenadas</h1>
-        <form action="/obterClima" method="get">
-            <input type="text" name="latitude" id="">
-            <input type="text" name="longitude" id="">
-            <button type="submit">Obter Clima</button>
-        </form>  
+        <section class="card-container">
+            <h2>Inserir coordenadas</h2>
+            <form action="/obterClima" method="get">
+                <label for="lat">Insira a latitude</label>
+                <input type="text" name="latitude" id="lat">
+                <label for="long">Insira a longitude</label>
+                <input type="text" name="longitude" id="long">
+                <button type="submit">Obter Clima</button>
+            </form>  
+        </section>
     </main>
 </body>
 </html>
