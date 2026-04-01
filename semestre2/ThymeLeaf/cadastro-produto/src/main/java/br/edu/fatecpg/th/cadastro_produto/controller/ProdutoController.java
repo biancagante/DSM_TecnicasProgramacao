@@ -58,6 +58,13 @@ public class ProdutoController {
     @GetMapping("/editar/id")
     public String editar(int id, Model model) {
         model.addAttribute("produto", produtos.get(id));
+        model.addAttribute("id", id);
         return "editar";
+    }
+
+    @PostMapping("/editar/id")
+    public String editarProduto(int id, @ModelAttribute Produto produto, Model model) {
+        produtos.set(id, produto);
+        return "redirect:/lista";
     }
 }

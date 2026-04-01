@@ -11,7 +11,7 @@
     <main>
         <section class="container-md d-flex justify-content-center align-items-center w-100 vh-100">
             <!-- th:action="@{/cadastrar}" th:object="${produto}" method="post" -->
-            <form th:object="${produto}" class="w-50 d-flex flex-column p-3 rounded border small">
+            <form th:action="@{/editar/id(id=${id})}" th:object="${produto}" method="post" class="w-50 d-flex flex-column p-3 rounded border small">
                 <h4 class="p-2">Editar produto</h4>
                 <div class="mb-2">
                     <label for="nome" class="form-label ">Nome</label>
