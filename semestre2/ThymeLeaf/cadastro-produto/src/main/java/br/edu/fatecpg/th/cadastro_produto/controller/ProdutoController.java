@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,9 +28,19 @@ public class ProdutoController {
     }
 
     @PostMapping("/cadastrar")
-    public String cadastrarProduto(@ModelAttribute Produto produto) {
-        produtos.add(produto);
-        return "redirect:/lista";
+    public String cadastrarProduto(@ModelAttribute Produto produto, Model model) {
+        if (produto.getPreco() < 0) {
+            model.addAttribute("erroPreco", "Valor de preço inserido é inválido");
+            return "cadastrar";
+        }
+        else if (produto.getNome() == null || produto.getNome().isEmpty()) {
+            model.addAttribute("erroNome", "Um nome deve ser inserido");
+            return "cadastrar";
+        }
+        else {
+            produtos.add(produto);
+            return "redirect:/lista";
+        }
     }
 
     @GetMapping("/lista")
@@ -42,5 +53,11 @@ public class ProdutoController {
     public String deletarProduto(int id) {
         produtos.remove(id);
         return "redirect:/lista";
+    }
+
+    @GetMapping("/editar/id")
+    public String editar(int id, Model model) {
+        model.addAttribute("produto", produtos.get(id));
+        return "editar";
     }
 }

@@ -15,6 +15,9 @@
                 <div class="mb-2">
                     <label for="nome" class="form-label ">Nome</label>
                     <input type="text" th:field="*{nome}" placeholder="Nome do produto" class="form-control">
+                    <div th:if="${erroNome}" >
+                        <span th:text="${erroNome}" class="text-danger small"></span>
+                    </div>
                 </div>
                 <div class="mb-2">
                     <label for="descricao" class="form-label">Descrição</label>
@@ -23,14 +26,16 @@
                 <div class="mb-2">
                     <label for="preco" class="form-label">Preço</label>
                     <input type="number" th:field="*{preco}" step="00.01" placeholder="Preço do produto" class="form-control">
-                    <span th:if="*{preco} == 0 ? 'Uai 1': 'Uai 2'"></span>
+                    <div th:if="${erroPreco}" >
+                        <span th:text="${erroPreco}" class="text-danger small"></span>
+                    </div>
                 </div>
                 <div class="mb-2">
                     <label for="categoria" class="form-label">Categoria</label>
                     <select th:field="*{categoria}" class="form-select">
                         <option selected value="Eletrônico">Eletrônico</option>
                         <option value="Vestuário">Vestuário</option>
-                        <option value="Vestuário">Alimento</option>
+                        <option value="Alimento">Alimento</option>
                         <option value="Outros">Outros</option>
                     </select>
                 </div>
