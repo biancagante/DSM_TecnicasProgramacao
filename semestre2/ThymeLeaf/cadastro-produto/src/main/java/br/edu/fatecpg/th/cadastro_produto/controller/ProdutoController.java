@@ -55,6 +55,11 @@ public class ProdutoController {
         return "redirect:/lista";
     }
 
+    // O editar busca pelo id (fornecido pela url do lista) na lista produtos, retorna o produto e o id.
+    // O id é adicionado como atributo para que no editar POST consiga buscar pelo id, que é utilizado para buscar na lista de array explicada anteriormente
+    // assim, o editar é alimentado pelo id fornecido no get, passa o id para a página e quando é feito post, atualiza o produto baseado no id fornecido à página.
+    // get (id) -> busca em produtos pelo id -> retorna produto para a página editar -> editar post (id) -> atualiza o produto setando pelo id e os campos de produto -> vai para lista.html 
+
     @GetMapping("/editar/id")
     public String editar(int id, Model model) {
         model.addAttribute("produto", produtos.get(id));
@@ -64,7 +69,19 @@ public class ProdutoController {
 
     @PostMapping("/editar/id")
     public String editarProduto(int id, @ModelAttribute Produto produto, Model model) {
-        produtos.set(id, produto);
-        return "redirect:/lista";
+        if (produto.getPreco() < 0) {
+            model.addAttribute("erroPreco", "Valor de preço inserido é inválido");
+            model.addAttribute("id", id);
+            return "editar";
+        }
+        else if (produto.getNome() == null || produto.getNome().isEmpty()) {
+            model.addAttribute("erroNome", "Um nome deve ser inserido");
+            model.addAttribute("id", id);
+            return "editar";
+        }
+        else {
+            produtos.set(id, produto);
+            return "redirect:/lista";
+        }
     }
 }

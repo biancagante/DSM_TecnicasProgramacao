@@ -16,9 +16,9 @@
                 <div class="mb-2">
                     <label for="nome" class="form-label ">Nome</label>
                     <input type="text" th:field="*{nome}" th:value="${produto.nome}" class="form-control">
-                    <!-- <div th:if="${erroNome}" >
+                    <div th:if="${erroNome}" >
                         <span th:text="${erroNome}" class="text-danger small"></span>
-                    </div> -->
+                    </div>
                 </div>
                 <div class="mb-2">
                     <label for="descricao" class="form-label">Descrição</label>
@@ -27,9 +27,9 @@
                 <div class="mb-2">
                     <label for="preco" class="form-label">Preço</label>
                     <input type="number" th:field="*{preco}" th:value="${produto.preco}" step="00.01" placeholder="Preço do produto" class="form-control">
-                    <!-- <div th:if="${erroPreco}" >
+                    <div th:if="${erroPreco}" >
                         <span th:text="${erroPreco}" class="text-danger small"></span>
-                    </div> -->
+                    </div>
                 </div>
                 <div class="mb-2">
                     <label for="categoria" class="form-label">Categoria</label>
