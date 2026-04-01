@@ -37,4 +37,10 @@ public class ProdutoController {
         model.addAttribute("produtos", produtos);
         return "lista";
     }
+
+    @GetMapping("/deletar/id")
+    public String deletarProduto(int id) {
+        produtos.remove(id);
+        return "redirect:/lista";
+    }
 }
