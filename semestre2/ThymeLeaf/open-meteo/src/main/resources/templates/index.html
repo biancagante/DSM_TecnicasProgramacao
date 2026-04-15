@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section class="card-container">
+            <h2>Inserir coordenadas</h2>
+            <form action="/obterClima" method="get">
+                <label for="lat">Insira a latitude</label>
+                <input type="text" name="latitude" id="lat">
+                <label for="long">Insira a longitude</label>
+                <input type="text" name="longitude" id="long">
+                <button type="submit">Obter Clima</button>
+            </form>  
+        </section>
+    </main>
+</body>
+</html>

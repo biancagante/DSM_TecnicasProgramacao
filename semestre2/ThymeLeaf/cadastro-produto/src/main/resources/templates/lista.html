@@ -1,0 +1,61 @@
+<!doctype html>
+<html xmlns:th="http://thymeleaf.org" lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lista de Produtos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-bs-theme="dark">
+    <main class="d-flex justify-content-center align-items-start min-vh-100 py-5">
+        <section class="container card p-4">
+            <!-- cabeçalho do card -->
+            <div class="mb-3 d-flex align-items-center gap-3">
+                <a href="/" class="btn btn-outline-secondary btn-sm">← Voltar</a>
+                <h4 class="card-title m-0">Lista de Produtos</h4>
+            </div>
+            <!-- card de erro -->
+            <div th:if="${#lists.isEmpty(produtos)}" class="card-body">
+                <p class="card-text text-muted">Nenhum produto encontrado.</p>
+            </div>
+            <!-- tabela de produtos -->
+            <div th:unless="${#lists.isEmpty(produtos)}" class="table-responsive">
+                <table class="table table-hover table-bordered align-middle mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th>Preço</th>
+                            <th>Categoria</th>
+                            <th>Quantidade em Estoque</th>
+                            <th class="text-center">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="produto, iterStat: ${produtos}">
+                            <td th:text="${produto.nome}"></td>
+                            <td>
+                                <span th:if="${#strings.isEmpty(produto.descricao)}" class="text-muted">Nenhuma descrição fornecida</span>
+                                <span th:unless="${#strings.isEmpty(produto.descricao)}" th:text="${produto.descricao}"></span>
+                            </td>
+                            <td th:text="${produto.preco}"></td>
+                            <td th:text="${produto.categoria}"></td>
+                            <td th:text="${produto.estoque}"></td>
+                            <td class="text-center">
+                                <a th:href="@{/editar/id(id=${iterStat.index})}" class="btn btn-secondary btn-sm">Editar</a>
+                                <a th:href="@{/deletar/id(id=${iterStat.index})}" class="btn btn-danger btn-sm">Remover</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="w-100 p-2 d-flex gap-2 align-items-center justify-content-end">
+                    <span class="fw-bold">Total de produtos: </span>
+                    <span th:text="${#lists.size(produtos)}"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzmiqMDlrzKO8jPRGLKTQMjGxSFGKxf6hXbgTerSM8eNvjxoJFmFIXuIOYv" crossorigin="anonymous"></script>
+</body>
+</html>
